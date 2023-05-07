@@ -1,6 +1,4 @@
 import Tweet from "../components/Tweet";
-
-import NavBar from "../components/NavBar";
 import CreateTweet from "../components/CreateTweet";
 
 import axios from "axios";
