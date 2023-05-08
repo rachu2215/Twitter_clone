@@ -2,7 +2,7 @@ import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
 
-const Tweet = ({ name, username, caption, img, profile, time, id }) => {
+const Tweet = ({ name, username, caption, img, profile, time, id, cmnt }) => {
   return (
     <>
       <div className="tweet">
@@ -10,7 +10,7 @@ const Tweet = ({ name, username, caption, img, profile, time, id }) => {
         <div className="tweet-content">
           <Header name={name} username={username} time={time} />
           <Content caption={caption} img={img} id={id} />
-          <Footer />
+          <Footer id={id} cmnt={cmnt} />
         </div>
       </div>
     </>

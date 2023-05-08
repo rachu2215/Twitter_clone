@@ -2,7 +2,7 @@ import { useState } from "react";
 import LikeButton from "./LikeButton";
 import UnlikeButton from "./UnlikeButton";
 
-const Footer = () => {
+const Footer = ({ id, cmnt }) => {
   // const [count, setCount] = useState(0);
   // const toggle = () => {
   //   setCount((count) => count + 1);
@@ -14,7 +14,9 @@ const Footer = () => {
 
   return (
     <div className="tweet-footer">
-      <button className="btn-reply">Reply</button>
+      <a href={`/tweet/${id}/${cmnt}`}>
+        <button className="btn-reply">Reply</button>
+      </a>
       <button className="btn-retweet">Retweet</button>
       {isLiked ? (
         <UnlikeButton toggle={toggle} />
